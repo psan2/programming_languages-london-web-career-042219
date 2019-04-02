@@ -6,11 +6,10 @@ def reformat_languages(languages)
   languages.each do |style, language|
     language.each do |lang, type|
       string = type.values.join
-      new_hash[lang] = {:type => string}
       if new_hash.has_key?(lang)
         new_hash[lang][:style] << style
       else
-        new_hash[lang][:style] => []
+        new_hash[lang] = {:type => string, :style => []}
         new_hash[lang][:style] << style
       end
     end
