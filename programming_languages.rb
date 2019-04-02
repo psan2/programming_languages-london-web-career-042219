@@ -8,7 +8,7 @@ def reformat_languages(languages)
       string = type.values.join
       new_hash[lang] = {:type => string,:style => []}
       new_hash[lang][:style] << style
-      binding.pry
     end
   end
+  new_hash
 end
